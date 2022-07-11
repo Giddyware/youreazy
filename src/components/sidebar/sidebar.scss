@@ -1,0 +1,84 @@
+.sidebar {
+  flex: 1;
+  border-right: 0.5px solid hsl(0deg 6% 90%);
+  min-height: 100vh;
+  background-color: white;
+  .top {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: hsl(291deg 70% 36%); //Purple color
+      //    color:  hsl(330deg 3% 13%); //Black color
+      //    color: hsl(57deg 100% 55%)  Yellow color
+    }
+  }
+
+  hr {
+    height: 0;
+    border: 0.5px solid hsl(0deg 6% 90%);
+  }
+
+  .center {
+    padding-left: 10px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      .title {
+        font-size: 10px;
+        font-weight: bold;
+        color: hsl(0deg 0% 62%);
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ece8ff;
+        }
+        .icon {
+          font-size: 18px;
+          color: hsl(291deg, 70%, 36%);
+        }
+        span {
+          font-size: 13px;
+          font-weight: 600;
+          color: #888;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+    .colorOption {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 1px solid hsl(291deg, 70%, 36%);
+      cursor: pointer;
+      margin: 5px;
+
+      &:nth-child(1) {
+        background-color: hsl(0, 5%, 75%);
+      }
+      &:nth-child(2) {
+        background-color: hsl(0, 0%, 13%);
+      }
+    }
+  }
+}
