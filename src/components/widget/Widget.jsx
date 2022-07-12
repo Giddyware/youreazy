@@ -22,7 +22,7 @@ const Widget = ({ type }) => {
         icon: (
           <PersonOutlinedIcon
             className="icon"
-            style={{ color: "crimson", backgroudColor: "rgba(255,0,0,0.2)" }}
+            style={{ color: "crimson", backgroundColor: "rgba(255,0,0,0.2)" }}
           />
         ),
       };
@@ -38,7 +38,7 @@ const Widget = ({ type }) => {
             className="icon"
             style={{
               color: "goldenrod",
-              backgroudColor: "rgba(218,165,32,0.2)",
+              backgroundColor: "rgba(218,165,32,0.2)",
             }}
           />
         ),
@@ -53,7 +53,7 @@ const Widget = ({ type }) => {
         icon: (
           <MonetizationOnOutlinedIcon
             className="icon"
-            style={{ color: "green", backgroudColor: "rgba(0,128,0,0.2)" }}
+            style={{ color: "green", backgroundColor: "rgba(0,128,0,0.2)" }}
           />
         ),
       };
@@ -67,7 +67,7 @@ const Widget = ({ type }) => {
         icon: (
           <AccountBalanceOutlinedIcon
             className="icon"
-            style={{ color: "purple", backgroudColor: "rgba(128,0,128,0.2)" }}
+            style={{ color: "purple", backgroundColor: "rgba(128,0,128,0.2)" }}
           />
         ),
       };
@@ -82,7 +82,7 @@ const Widget = ({ type }) => {
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">
-          {data.isMoney && "$"}
+          {data.isMoney && "#"}
           {amount}
         </span>
         <span className="link">{data.link}</span>
