@@ -37,7 +37,7 @@ export const userInputs = [
   },
   {
     id: 7,
-    label: "Username",
+    label: "Country",
     type: "text",
     placeholder: "Canada",
   },
