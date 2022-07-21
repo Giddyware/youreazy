@@ -33,7 +33,7 @@ export const userInputs = [
     id: 6,
     label: "Address",
     type: "text",
-    placeholder: "Willson St. 234 Green Rord",
+    placeholder: "Willson St. 234 Green Road",
   },
   {
     id: 7,

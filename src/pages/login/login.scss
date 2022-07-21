@@ -1,0 +1,75 @@
+//Color Pallete: https://coolors.co/891c9c-f6f8ff-1c0f13-de89be-d1d646
+
+
+.login {
+  background-color: hsl(0, 0%, 90%);
+  height: 100vh;
+  width: 100vw;
+  .card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    background-color: hsl(291, 70%, 75%);
+    display: flex;
+    // -webkit-box-shadow: 20px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+    -webkit-box-shadow: 7px 6px 1px 0px rgba(66, 4, 75, 0.8);
+    box-shadow: 7px 6px 1px 0px rgba(66, 4, 75, 0.8);
+
+    .left,
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      flex-direction: column;
+      // padding: 60px;
+      flex: 1;
+      background-color: #ffffff;
+
+      .title {
+        padding-bottom: 20px;
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      form {
+        .formInput {
+          input {
+            width: 100%;
+            padding: 5px;
+          }
+        }
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100px;
+          padding: 10px;
+          border: none;
+          background-color: rgb(113, 0, 128);
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+          border-radius: 5px;
+          margin-top: 10px;
+
+          &:hover {
+            background-color: rgba(113, 0, 128, 0.7);
+          }
+        }
+      }
+    }
+    .right {
+      flex: 1;
+    }
+  }
+}
