@@ -11,7 +11,7 @@ import Paper from "@mui/material/Paper";
 const List = () => {
   const rows = [
     {
-      id: 894283,
+      id: 894282,
       product: "tyres",
       img: "",
       customer: "Jegede Peter",
