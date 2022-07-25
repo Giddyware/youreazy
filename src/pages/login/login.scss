@@ -1,6 +1,5 @@
 //Color Pallete: https://coolors.co/891c9c-f6f8ff-1c0f13-de89be-d1d646
 
-
 .login {
   background-color: hsl(0, 0%, 90%);
   height: 100vh;
@@ -70,6 +69,11 @@
     }
     .right {
       flex: 1;
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+      }
     }
   }
 }

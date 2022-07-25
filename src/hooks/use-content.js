@@ -19,7 +19,7 @@ export default function useContent(target) {
         }));
         // return null;
         setContent(allContent);
-        console.log(allContent);
+        // console.log(allContent);
       }
     );
   }, [target]);
