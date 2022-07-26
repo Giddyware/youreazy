@@ -14,9 +14,9 @@ const Home = () => {
   // const { firebase } = useContext(FirebaseContext);
 
   // console.log(firebase);
-
   const { services } = useContent("services");
-  console.log(services);
+  console.log(services[0]);
+
   return (
     <div className="home">
       <Sidebar />

@@ -15,6 +15,7 @@ import CreditCardIcon from "@mui/icons-material/CreditCard";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
+import logo from "../../assets/images/logo_colored.png";
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -22,7 +23,16 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Your Eazy</span>
+          <span className="logo" style={{ display: "flex" }}>
+            <span style={{ fontSize: "16px", paddingTop: "4px" }}>
+              Your Eazy
+            </span>
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: "45px", height: "45px", objectFit: "contain" }}
+            />
+          </span>
         </Link>
       </div>
 
@@ -45,7 +55,7 @@ const Sidebar = () => {
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
-              <span>Products</span>
+              <span>Service Provider</span>
             </li>
           </Link>
           <li>

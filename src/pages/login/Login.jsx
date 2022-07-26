@@ -24,7 +24,7 @@ const Login = () => {
   const handleBur = (e) => {
     const { value } = e.target;
     console.log(value);
-    if (value == "") {
+    if (value === "") {
       setMessageUsername("Please enter a valid email or phone number.");
     }
   };
