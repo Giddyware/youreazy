@@ -9,7 +9,7 @@ const DataTable = () => {
   const [data, setData] = useState([]);
 
   const { users } = useContent("users");
-  console.log(users);
+  // console.log(users);
   useEffect(() => {
     setData(users.slice(0, 10));
   }, [users]);
@@ -23,7 +23,7 @@ const DataTable = () => {
       headerName: "Action",
       width: 200,
       renderCell: (params) => {
-        console.log(params);
+        // console.log(params);
         return (
           <div className="cellAction">
             <Link to="/users/test" style={{ textDecoration: "none" }}>
@@ -49,9 +49,11 @@ const DataTable = () => {
           Add New
         </Link>
       </div>
+      {console.log(data)}
       <DataGrid
         className="datagrid"
         rows={data}
+        getRowId={(row) => row.uid}
         columns={userColumn.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}

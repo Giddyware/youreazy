@@ -9,7 +9,12 @@ export const userColumn = [
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
-          <img src={params.row.img} alt="avatar" className="cellImg" />
+          <img
+            fetchpriority="high"
+            src={params.row.imageUrl}
+            alt="avatar"
+            className="cellImg"
+          />
           {params.row.username}
         </div>
       );
@@ -21,8 +26,8 @@ export const userColumn = [
     width: 230,
   },
   {
-    field: "age",
-    headerName: "Age",
+    field: "emailVerified",
+    headerName: "Email Verified",
     width: 100,
   },
   {
