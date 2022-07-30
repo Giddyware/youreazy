@@ -5,14 +5,15 @@ import "./datatable.scss";
 import { useEffect, useState } from "react";
 import useContent from "../../hooks/use-content";
 
-const DataTable = () => {
+const DataTable = ({ mechanic }) => {
   const [data, setData] = useState([]);
 
   const { users } = useContent("users");
   // console.log(users);
   useEffect(() => {
-    setData(users.slice(0, 10));
+    setData(users.slice(0, 20));
   }, [users]);
+  // console.log(data);
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
@@ -26,7 +27,10 @@ const DataTable = () => {
         // console.log(params);
         return (
           <div className="cellAction">
-            <Link to="/users/test" style={{ textDecoration: "none" }}>
+            <Link
+              to={`/customers/${params.row.uid}`}
+              style={{ textDecoration: "none" }}
+            >
               <div className="viewButton">View</div>
             </Link>
             <div
@@ -52,7 +56,11 @@ const DataTable = () => {
       {console.log(data)}
       <DataGrid
         className="datagrid"
-        rows={data}
+        rows={
+          mechanic
+            ? data.filter((item) => item?.mechanic !== "true")
+            : data.filter((item) => item?.mechanic !== "false")
+        }
         getRowId={(row) => row.uid}
         columns={userColumn.concat(actionColumn)}
         pageSize={9}
