@@ -8,8 +8,13 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
+import useAuthListener from "../../hooks/use-auth-listener";
 
 const Navbar = () => {
+  const { user } = useAuthListener();
+
+  // console.log(user);
+
   const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="navbar">
@@ -24,7 +29,7 @@ const Navbar = () => {
             English
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon
+            <DarkModeOutlinedIcon 
               className="icon"
               onClick={() => dispatch({ type: "TOGGLE" })}
             />
@@ -43,8 +48,8 @@ const Navbar = () => {
           <div className="item">
             <ListOutlinedIcon className="icon" />
           </div>
-          <div className="item">
-            <img src="" alt="" className="avatar" />
+          <div className="item" onClick={()=>{}}>
+            <img src={user.photoURL} alt="" className="avatar" />
           </div>
         </div>
       </div>

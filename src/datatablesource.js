@@ -13,7 +13,12 @@ export const userColumn = [
             fetchpriority="high"
             src={params.row.imageUrl}
             alt="avatar"
-            className="cellImg"
+            // className="cellImg"
+            style={{
+              width: "50px",
+              height: "50px",
+              borderRadius: "50%",
+            }}
           />
           {params.row.username}
         </div>

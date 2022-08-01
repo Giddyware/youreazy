@@ -9,11 +9,11 @@ const DataTable = ({ mechanic }) => {
   const [data, setData] = useState([]);
 
   const { users } = useContent("users");
-  // console.log(users);
+  
   useEffect(() => {
     setData(users.slice(0, 20));
   }, [users]);
-  // console.log(data);
+ 
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
@@ -24,7 +24,7 @@ const DataTable = ({ mechanic }) => {
       headerName: "Action",
       width: 200,
       renderCell: (params) => {
-        // console.log(params);
+        
         return (
           <div className="cellAction">
             <Link
